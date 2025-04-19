@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Буквица</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/contact.css">
+    <link rel="shortcut icon" href="assets/img/baza/favicon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/admin.css">
+    <link rel="stylesheet" href="assets/css/user.css">
+    <link rel="stylesheet" href="assets/css/basket.css">
+
+</head>
+ 
+<body>
+
+    <!-- header -->
+    <div class="header">
+        <div class="container">
+            <div class="header__inner">
+
+                <a href="main.html" class="logo">
+                    <img src="assets/img/baza/logo.svg" alt="logo">
+                </a>
+
+                <div class="menu">
+                    <a href="main.html" class="menu-link">Главная</a>
+                    <a href="about.html" class="menu-link">О нас</a>
+                    <a href="catalog.html" class="menu-link">Каталог</a>
+                    <a href="contact.html" class="menu-link">Контакты</a>
+                </div>
+
+                <div class="header-right">
+                    <div class="header-btn__group">
+                        <button class="user">
+                            <img src="assets/img/header/user.svg" alt="user">
+                        </button>
+                        <a href="basket.html" class="bag">
+                            <img src="assets/img/header/bag.svg" alt="bag">
+                        </a>
+                    </div>
+    
+                    <div class="menu-mob">
+                        <input type="checkbox" id="burger">
+                        <label for="burger"></label>
+                        <div class="menu_nav">
+                            <nav>
+                                <a class="active" href="main.html">Главная</a>
+                                <a href="about.html">О нас</a>
+                                <a href="catalog.html">Каталог</a>
+                                <a href="contact.html">Контакты</a>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    <!-- end-header -->
+
+     <!-- header-aut -->
+     <div class="container">
+        <div class="modal modal-aut">
+            <div class="modal__content">
+                <img src="assets/img/aut,reg/close.svg" class="exit-modal exit-modal-aut"></img>
+                <h2 class="aut__title">
+                    Авторизация
+                </h2>
+                <form class="form-autreg" action="">
+                    <input class="input-autreg" type="text" placeholder="Ваше имя">
+                    <input class="input-autreg" type="password" name="" id="" placeholder="Введите пароль">
+                    <a href="#" class="aut-btn">Войти</a>
+                    <button class="reg__active-btn">Регистрация</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- end-header-aut -->
+
+    <!-- header-reg -->
+    <div class="container">
+        <div class="modal modal-reg">
+            <div class="modal__content">
+                <img src="assets/img/aut,reg/close.svg" class="exit-modal exit-modal-reg"></img>
+                <h2 class="reg__title">
+                    Регистрация
+                </h2>
+                <form class="form-autreg" action="">
+                    <input class="input-autreg" type="text" placeholder="Ваше имя">
+                    <input class="input-autreg" type="email" name="" id="" placeholder=" Ваш email">
+                    <input class="input-autreg" type="password" name="" id="" placeholder="Введите пароль">
+                    <input class="input-autreg" type="password" name="" id="" placeholder="Повторите пароль">
+                    <div class="sogl">
+                        <input type="checkbox" name="" id="">
+                        <a class="sogl-link" href="#">Я согласен с политикой конфиденциальности
+                        </a>
+                    </div>
+                    <a href="#" class="reg-btn">Отправить</a>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let modalAut = document.querySelector(".modal-aut");
+        let modalReg = document.querySelector(".modal-reg");
+        let exitModalAut = document.querySelector(".exit-modal-aut");
+        let exitModalReg = document.querySelector(".exit-modal-reg");
+        let user = document.querySelector(".user");
+        let regActivebtn = document.querySelector(".reg__active-btn");
+    
+        user.addEventListener('click', () => {
+            modalAut.style.display = "flex";
+            modalReg.style.display = "none";
+        });
+    
+        regActivebtn.addEventListener('click', () => {
+            modalReg.style.display = "flex";
+            modalAut.style.display = "none";
+        });
+    
+        exitModalAut.addEventListener('click', () => {
+            modalAut.style.display = "none";
+        });
+    
+        exitModalReg.addEventListener('click', () => {
+            modalReg.style.display = "none";
+        });
+    
+        modalAut.addEventListener('click', (event) => {
+            if (event.target === modalAut) {
+                modalAut.style.display = "none";
+            }
+        });
+    
+        modalReg.addEventListener('click', (event) => {
+            if (event.target === modalReg) {
+                modalReg.style.display = "none";
+            }
+        });
+    </script>
+    <!-- end-header-reg -->
+
+    <!-- main -->
+    <main class="main">
+
+        <div class="container">
+            <div class="user-content">
+                <div class="tabs user-tabs">
+
+                    <div class="tab active" onclick="showContent('tab1')">
+                        <img src="assets/img/user/user.svg" alt="admin-icon">
+                        <p class="tab__text">Личные данные</p>
+                    </div>
+
+                    <div class="tab active" onclick="showContent('tab2')">
+                        <img src="assets/img/user/bag.svg" alt="admin-icon">
+                        <p class="tab__text">Заказы</p>
+                    </div>
+
+                    <div class="tap-line"></div>
+                    <div class="tab tab-exit">
+                        <a href="#">
+                            <img src="assets/img/admin/exit.svg" alt="admin-icon">
+                            <p class="tab__text">Выйти</p>
+                        </a>
+                    </div>
+                </div>
+            
+                <div id="content" class="content content2">
+                    <div id="tab1" class="tab-content">
+                        <h2 class="user__title">Профиль</h2>
+                        <form action="" class="form-user">
+                            <h3 class="user-name">
+                                Киямов Ильмир
+                            </h3>
+                            <p class="user-email">
+                                ilmir.kiyamov@list.ru
+                            </p>
+                        </form>
+                        <h2 class="user__title">Редактировать данные</h2>
+                        <form action="" class="form-user form-user__sec">
+                            <div class="form-block">
+                                <p class="form-user__text">Фамилия *</p>
+                                <input type="text" class="form-user__input" placeholder="Киямов">
+                            </div>
+                            <div class="form-block">
+                                <p class="form-user__text">Имя *</p>
+                                <input type="text" class="form-user__input" placeholder="Ильмир">
+                            </div>
+                            <div class="form-block">
+                                <p class="form-user__text">Пароль *</p>
+                                <input type="text" class="form-user__input" placeholder="123123">
+                            </div>
+                            <div class="form-block">
+                                <p class="form-user__text">E-mail *</p>
+                                <input type="text" class="form-user__input" placeholder="ilmirkiyamov@list.ru">
+                            </div>
+                            <button class="blue-btn user-save__btn">
+                                Сохранить
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+                <div id="tab2" class="tab-content" style="display: none;">
+                    <h2 class="user__title">
+                        Заказы
+                    </h2>
+                    <form action="" class="form-user">
+                        <div class="basket__inner">
+                            <div class="basket-card">
+                                <div class="basket__content">
+                                    <div class="basket-card__left">
+                                        <a href="#">
+                                            <img class="basket-card__img" src="assets/img/main/catalog/card3.png" alt="card">
+                                        </a>
+            
+                                        <div class="basket-card__left-content user-basket__content">
+                                            <a href="#" class="basket-card__name">
+                                                Вегетация
+                                            </a>
+                                            <p class="basket-card__author">
+                                                Алексей Иванов
+                                            </p>
+                                            <p class="basket-card__weight">
+                                                0.36 кг
+                                            </p>
+                                            <p class="user-price">
+                                                1 204 ₽
+                                            </p>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                <div class="basket-card__line"></div>
+                            </div>
+        
+                        </div>
+        
+                        <p class="basket-sum">
+                            Сумма: 1204 ₽.
+                        </p>
+        
+                        <button class="blue-btn basket-btn">
+                            Оформить
+                        </button>
+                    </form>
+                </div>
+
+
+
+        <script>
+            function showContent(tabId) {
+
+                const contents = document.querySelectorAll('.tab-content');
+                contents.forEach(content => {
+                    content.style.display = 'none';
+                });
+
+                const activeContent = document.getElementById(tabId);
+                activeContent.style.display = 'block';
+
+                const tabs = document.querySelectorAll('.tab');
+                tabs.forEach(tab => {
+                    tab.classList.remove('active');
+                });
+                const activeTab = Array.from(tabs).find(tab => tab.textContent.trim() === tabId.replace('tab', 'Вкладка '));
+                if (activeTab) activeTab.classList.add('active');
+
+            }
+
+        </script>
+        
+    </main>
+    <!-- end-main -->
+
+    <!-- footer -->
+    <div class="footer">
+        <div class="container">
+            <div class="footer__inner">
+                <a href="#" class="logo">
+                    <img src="assets/img/footer/logo.svg" alt="logo">
+                </a>
+    
+                <div class="footer-menu footer-menu__none1">
+                    <a href="main.html" class="menu-link__footer">Главная</a>
+                    <a href="about.html" class="menu-link__footer">О нас</a>
+                    <a href="catalog.html" class="menu-link__footer">Каталог</a>
+                    <a href="contact.html" class="menu-link__footer">Контакты</a>
+                </div>
+    
+    
+                <div class="footer-icon">
+                    <a href="main.html" class="footer-icon__img">
+                        <img src="assets/img/footer/what.svg" alt="footer-icon__img">
+                    </a>
+                    <a href="" class="footer-icon__img">
+                        <img src="assets/img/footer/vk.svg" alt="footer-icon__img">
+                    </a>
+                    <a href="#" class="footer-icon__img">
+                        <img src="assets/img/footer/tg.svg" alt="footer-icon__img">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-menu footer-menu__none2">
+            <a href="main.html" class="menu-link__footer">Главная</a>
+            <a href="about.html" class="menu-link__footer">О нас</a>
+            <a href="catalog.html" class="menu-link__footer">Каталог</a>
+            <a href="contact.html" class="menu-link__footer">Контакты</a>
+        </div>
+
+        <div class="line"></div>
+
+        <div class="container">
+            <a href="#" class="copy">
+                Киямов 2025
+            </a>
+        </div>
+    </div>
+    <!-- end-footer -->
+
+</body>
+
+
+</html>

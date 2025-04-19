@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Буквица</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/contact.css">
+    <link rel="stylesheet" href="assets/css/product.css">
+    <link rel="stylesheet" href="assets/css/basket.css">
+    <link rel="stylesheet" href="assets/css/about.css">
+    <link rel="shortcut icon" href="assets/img/baza/favicon.svg" type="image/x-icon">
+
+</head>
+ 
+<body>
+
+    <!-- header -->
+    <div class="header">
+        <div class="container">
+            <div class="header__inner">
+
+                <a href="main.html" class="logo">
+                    <img src="assets/img/baza/logo.svg" alt="logo">
+                </a>
+
+                <div class="menu">
+                    <a href="main.html" class="menu-link">Главная</a>
+                    <a href="about.html" class="menu-link">О нас</a>
+                    <a href="catalog.html" class="menu-link">Каталог</a>
+                    <a href="contact.html" class="menu-link">Контакты</a>
+                </div>
+
+                <div class="header-right">
+                    <div class="header-btn__group">
+                        <button class="user">
+                            <img src="assets/img/header/user.svg" alt="user">
+                        </button>
+                        <a href="basket.html" class="bag">
+                            <img src="assets/img/header/bag.svg" alt="bag">
+                        </a>
+                    </div>
+    
+                    <div class="menu-mob">
+                        <input type="checkbox" id="burger">
+                        <label for="burger"></label>
+                        <div class="menu_nav">
+                            <nav>
+                                <a class="active" href="main.html">Главная</a>
+                                <a href="about.html">О нас</a>
+                                <a href="catalog.html">Каталог</a>
+                                <a href="contact.html">Контакты</a>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    <!-- end-header -->
+
+     <!-- header-aut -->
+     <div class="container">
+        <div class="modal modal-aut">
+            <div class="modal__content">
+                <img src="assets/img/aut,reg/close.svg" class="exit-modal exit-modal-aut"></img>
+                <h2 class="aut__title">
+                    Авторизация
+                </h2>
+                <form class="form-autreg" action="">
+                    <input class="input-autreg" type="text" placeholder="Ваше имя">
+                    <input class="input-autreg" type="password" name="" id="" placeholder="Введите пароль">
+                    <a href="#" class="aut-btn">Войти</a>
+                    <button class="reg__active-btn">Регистрация</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- end-header-aut -->
+
+    <!-- header-reg -->
+    <div class="container">
+        <div class="modal modal-reg">
+            <div class="modal__content">
+                <img src="assets/img/aut,reg/close.svg" class="exit-modal exit-modal-reg"></img>
+                <h2 class="reg__title">
+                    Регистрация
+                </h2>
+                <form class="form-autreg" action="">
+                    <input class="input-autreg" type="text" placeholder="Ваше имя">
+                    <input class="input-autreg" type="email" name="" id="" placeholder=" Ваш email">
+                    <input class="input-autreg" type="password" name="" id="" placeholder="Введите пароль">
+                    <input class="input-autreg" type="password" name="" id="" placeholder="Повторите пароль">
+                    <div class="sogl">
+                        <input type="checkbox" name="" id="">
+                        <a class="sogl-link" href="#">Я согласен с политикой конфиденциальности
+                        </a>
+                    </div>
+                    <a href="#" class="reg-btn">Отправить</a>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let modalAut = document.querySelector(".modal-aut");
+        let modalReg = document.querySelector(".modal-reg");
+        let exitModalAut = document.querySelector(".exit-modal-aut");
+        let exitModalReg = document.querySelector(".exit-modal-reg");
+        let user = document.querySelector(".user");
+        let regActivebtn = document.querySelector(".reg__active-btn");
+    
+        user.addEventListener('click', () => {
+            modalAut.style.display = "flex";
+            modalReg.style.display = "none";
+        });
+    
+        regActivebtn.addEventListener('click', () => {
+            modalReg.style.display = "flex";
+            modalAut.style.display = "none";
+        });
+    
+        exitModalAut.addEventListener('click', () => {
+            modalAut.style.display = "none";
+        });
+    
+        exitModalReg.addEventListener('click', () => {
+            modalReg.style.display = "none";
+        });
+    
+        modalAut.addEventListener('click', (event) => {
+            if (event.target === modalAut) {
+                modalAut.style.display = "none";
+            }
+        });
+    
+        modalReg.addEventListener('click', (event) => {
+            if (event.target === modalReg) {
+                modalReg.style.display = "none";
+            }
+        });
+    </script>
+    <!-- end-header-reg -->
+
+
+    <!-- main -->
+    <main class="main">
+
+        <!-- exit -->
+        <div class="container">
+            <div class="exit">
+                <a class="exit__link" href="main.html">
+                    <span>← </span>вернуться
+                </a>
+            </div>
+        </div>
+        <!-- end-exit -->
+
+        <!-- about -->
+        <div class="about-page">
+            <div class="container">
+
+                <h2 class="block__title">
+                    О нас
+                </h2>
+
+                <div class="about-page__inner">
+
+                    <div class="about-page__card">
+                        <p class="about-page__text">
+                            Магазин "Буквица" — это уютное книжное заведение, которое привлекает любителей литературы своей атмосферой и разнообразием книг. Здесь можно найти как современные бестселлеры, так и редкие издания классической литературы. В "Буквице" часто проводятся мероприятия, такие как встречи с авторами, литературные вечера и мастер-классы, что создает возможность для общения и обмена мнениями среди читателей.
+                        </p>
+                        <img src="assets/img/about/card1.png" alt="about-card">
+                    </div>
+
+                    <div class="about-page__card">
+                        <img src="assets/img/about/card2.png" alt="about-card">
+                        <p class="about-page__text">
+                            Персонал магазина состоит из настоящих ценителей книг, которые готовы помочь с выбором и предложить интересные рекомендации. Уютные уголки для чтения позволяют посетителям погрузиться в мир литературы, наслаждаясь чашечкой кофе или чая. "Буквица" становится не только местом покупки книг, но и культурным центром, где царит дух творчества и любви к литературе.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- end-about -->
+
+
+        <!-- ques -->
+        <div class="ques">
+            <div class="container">
+                
+                <h2 class="block__title ques__title">Ответы на вопросы</h2>
+
+                <div class="accordion">
+                    <div class="accordion-item">
+                        <div class="accordion-header" onclick="toggleAccordion(this)">
+                            О чем сайт?
+                            <span class="accordion-icon">+</span>
+                        </div>
+                        <div class="accordion-content">
+                            <p>Сайт "Буквица" — это интернет-магазин книг, предлагающий широкий ассортимент литературы различных жанров и направлений. Здесь можно найти как популярные бестселлеры, так и редкие издания, что позволяет удовлетворить интересы самых разных читателей. Также на сайте представлены книги для детей, учебные материалы и специализированная литература.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <div class="accordion-header" onclick="toggleAccordion(this)">
+                            Как оформить заказ?
+                            <span class="accordion-icon">+</span>
+                        </div>
+                        <div class="accordion-content">
+                            <p>Чтобы оформить заказ, сначала выберите товар, который вас интересует, и перейдите на его страницу. На странице товара вы увидите кнопку "Купить" или "Добавить в корзину"</p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <div class="accordion-header" onclick="toggleAccordion(this)">
+                            Есть ли доставка?
+                            <span class="accordion-icon">+</span>
+                        </div>
+                        <div class="accordion-content">
+                            <p>Да, интернет-магазин "Буквица" предлагает доставку книг по всей стране. Клиенты могут выбрать удобный способ получения заказа, включая доставку на дом или в пункты самовывоза. Кроме того, магазин часто проводит акции и предлагает бесплатную доставку при заказе на определенную сумму.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        
+        <script>
+        
+            function toggleAccordion(header) {
+                const content = header.nextElementSibling;
+                const icon = header.querySelector('.accordion-icon');
+
+                if (content.style.display === "block") {
+                    content.style.display = "none";
+                    icon.textContent = "+";
+                    header.classList.remove('active');
+                } else {
+                    content.style.display = "block";
+                    icon.textContent = "-";
+                    header.classList.add('active'); 
+                }
+            }
+
+
+        </script>
+
+        <!-- end-ques -->
+
+    <!-- document -->
+    <div class="document">
+        <div class="container">
+            <h2 class="block__title">
+                Документы
+            </h2>
+
+            <div class="document__inner">
+                <div class="document-card active">
+                    <a href="assets/img/about/doc1.png" download>
+                        <img src="assets/img/about/doc1.png" alt="doc">
+                    </a>
+                    <p class="document-card__text">
+                        Сертификация соответствия продукции
+                    </p>
+                </div>
+                <div class="document-card">
+                    <a href="assets/img/about/doc2.png" download>
+                        <img src="assets/img/about/doc2.png" alt="doc">
+                    </a>
+                    <p class="document-card__text">
+                        Сертификация соответствия продукции
+                    </p>
+                </div>
+                <div class="document-card">
+                    <a href="assets/img/about/doc3.png" download>
+                        <img src="assets/img/about/doc3.png" alt="doc">
+                    </a>
+                    <p class="document-card__text">
+                        Сертификация соответствия продукции
+                    </p>
+                </div>
+            </div>
+            
+            <div class="doc-str">
+                <button id="prev" onclick="changeSlide(-1)">
+                    <img src="assets/img/main/catalog/arrow-square-left.svg" alt="left">
+                </button>
+                <button id="next" onclick="changeSlide(1)">
+                    <img src="assets/img/main/catalog/arrow-square-right.svg" alt="right">
+                </button>
+            </div>
+            
+        </div>
+    </div>
+
+    <script>
+
+    let currentSlide = 0;
+
+    function showSlide(index) {
+        const slides = document.querySelectorAll('.document-card');
+        
+        // Сброс всех карточек
+        slides.forEach((slide, i) => {
+            slide.classList.remove('active');
+            if (i === index) {
+                slide.classList.add('active');
+            }
+        });
+    }
+
+    function changeSlide(direction) {
+        const slides = document.querySelectorAll('.document-card');
+        
+        currentSlide += direction;
+
+        // Защита от выхода за пределы массива
+        if (currentSlide < 0) {
+            currentSlide = slides.length - 1; // Переход к последнему слайду
+        } else if (currentSlide >= slides.length) {
+            currentSlide = 0; // Переход к первому слайду
+        }
+
+        showSlide(currentSlide);
+    }
+
+    // Инициализация слайдера
+    showSlide(currentSlide);
+
+    </script>
+    <!-- end-document -->
+
+    </main>
+    <!-- end-main -->
+
+    <!-- footer -->
+    <div class="footer">
+        <div class="container">
+            <div class="footer__inner">
+                <a href="#" class="logo">
+                    <img src="assets/img/footer/logo.svg" alt="logo">
+                </a>
+    
+                <div class="footer-menu footer-menu__none1">
+                    <a href="main.html" class="menu-link__footer">Главная</a>
+                    <a href="about.html" class="menu-link__footer">О нас</a>
+                    <a href="catalog.html" class="menu-link__footer">Каталог</a>
+                    <a href="contact.html" class="menu-link__footer">Контакты</a>
+                </div>
+    
+    
+                <div class="footer-icon">
+                    <a href="main.html" class="footer-icon__img">
+                        <img src="assets/img/footer/what.svg" alt="footer-icon__img">
+                    </a>
+                    <a href="" class="footer-icon__img">
+                        <img src="assets/img/footer/vk.svg" alt="footer-icon__img">
+                    </a>
+                    <a href="#" class="footer-icon__img">
+                        <img src="assets/img/footer/tg.svg" alt="footer-icon__img">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-menu footer-menu__none2">
+            <a href="main.html" class="menu-link__footer">Главная</a>
+            <a href="about.html" class="menu-link__footer">О нас</a>
+            <a href="catalog.html" class="menu-link__footer">Каталог</a>
+            <a href="contact.html" class="menu-link__footer">Контакты</a>
+        </div>
+
+        <div class="line"></div>
+
+        <div class="container">
+            <a href="#" class="copy">
+                Киямов 2025
+            </a>
+        </div>
+    </div>
+    <!-- end-footer -->
+
+</body>
+
+
+</html>

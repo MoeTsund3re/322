@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Буквица</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/contact.css">
+    <link rel="stylesheet" href="assets/css/product.css">
+    <link rel="shortcut icon" href="assets/img/baza/favicon.svg" type="image/x-icon">
+
+</head>
+ 
+<body>
+
+    <!-- header -->
+    <div class="header">
+        <div class="container">
+            <div class="header__inner">
+
+                <a href="main.html" class="logo">
+                    <img src="assets/img/baza/logo.svg" alt="logo">
+                </a>
+
+                <div class="menu">
+                    <a href="main.html" class="menu-link">Главная</a>
+                    <a href="about.html" class="menu-link">О нас</a>
+                    <a href="catalog.html" class="menu-link">Каталог</a>
+                    <a href="contact.html" class="menu-link">Контакты</a>
+                </div>
+
+                <div class="header-right">
+                    <div class="header-btn__group">
+                        <button class="user">
+                            <img src="assets/img/header/user.svg" alt="user">
+                        </button>
+                        <a href="basket.html" class="bag">
+                            <img src="assets/img/header/bag.svg" alt="bag">
+                        </a>
+                    </div>
+    
+                    <div class="menu-mob">
+                        <input type="checkbox" id="burger">
+                        <label for="burger"></label>
+                        <div class="menu_nav">
+                            <nav>
+                                <a class="active" href="main.html">Главная</a>
+                                <a href="about.html">О нас</a>
+                                <a href="catalog.html">Каталог</a>
+                                <a href="contact.html">Контакты</a>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    <!-- end-header -->
+
+     <!-- header-aut -->
+     <div class="container">
+        <div class="modal modal-aut">
+            <div class="modal__content">
+                <img src="assets/img/aut,reg/close.svg" class="exit-modal exit-modal-aut"></img>
+                <h2 class="aut__title">
+                    Авторизация
+                </h2>
+                <form class="form-autreg" action="">
+                    <input class="input-autreg" type="text" placeholder="Ваше имя">
+                    <input class="input-autreg" type="password" name="" id="" placeholder="Введите пароль">
+                    <a href="#" class="aut-btn">Войти</a>
+                    <button class="reg__active-btn">Регистрация</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- end-header-aut -->
+
+    <!-- header-reg -->
+    <div class="container">
+        <div class="modal modal-reg">
+            <div class="modal__content">
+                <img src="assets/img/aut,reg/close.svg" class="exit-modal exit-modal-reg"></img>
+                <h2 class="reg__title">
+                    Регистрация
+                </h2>
+                <form class="form-autreg" action="">
+                    <input class="input-autreg" type="text" placeholder="Ваше имя">
+                    <input class="input-autreg" type="email" name="" id="" placeholder=" Ваш email">
+                    <input class="input-autreg" type="password" name="" id="" placeholder="Введите пароль">
+                    <input class="input-autreg" type="password" name="" id="" placeholder="Повторите пароль">
+                    <div class="sogl">
+                        <input type="checkbox" name="" id="">
+                        <a class="sogl-link" href="#">Я согласен с политикой конфиденциальности
+                        </a>
+                    </div>
+                    <a href="#" class="reg-btn">Отправить</a>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let modalAut = document.querySelector(".modal-aut");
+        let modalReg = document.querySelector(".modal-reg");
+        let exitModalAut = document.querySelector(".exit-modal-aut");
+        let exitModalReg = document.querySelector(".exit-modal-reg");
+        let user = document.querySelector(".user");
+        let regActivebtn = document.querySelector(".reg__active-btn");
+    
+        user.addEventListener('click', () => {
+            modalAut.style.display = "flex";
+            modalReg.style.display = "none";
+        });
+    
+        regActivebtn.addEventListener('click', () => {
+            modalReg.style.display = "flex";
+            modalAut.style.display = "none";
+        });
+    
+        exitModalAut.addEventListener('click', () => {
+            modalAut.style.display = "none";
+        });
+    
+        exitModalReg.addEventListener('click', () => {
+            modalReg.style.display = "none";
+        });
+    
+        modalAut.addEventListener('click', (event) => {
+            if (event.target === modalAut) {
+                modalAut.style.display = "none";
+            }
+        });
+    
+        modalReg.addEventListener('click', (event) => {
+            if (event.target === modalReg) {
+                modalReg.style.display = "none";
+            }
+        });
+    </script>
+    <!-- end-header-reg -->
+
+    <!-- main -->
+    <main class="main">
+
+        <!-- exit -->
+        <div class="container">
+            <div class="exit">
+                <a class="exit__link" href="main.html">
+                    <span>← </span>вернуться
+                </a>
+            </div>
+        </div>
+        <!-- end-exit -->
+
+        <!-- product -->
+        <div class="product">
+            <div class="container">
+                <div class="product__inner">
+                    <img class="product-img" src="assets/img/product/product.png" alt="product-img">
+
+                    <div class="product__content">
+                        <h3 class="product__name">
+                            Почтальонша
+                        </h3>
+                        <p class="product__author">
+                            Франческа Джанонне
+                        </p>
+                        
+                        <div class="product__block">
+                            <h3 class="desc__title">
+                                Описание
+                            </h3>
+                            <p class="desc__text">
+                                Роман Франчески Джанноне разворачивается в Лиццанелло, Апулия, где в 1934 году северянка Анна приезжает с мужем Карло и сыном. Для местных жителей она навсегда останется «иностранкой», не желающей подчиняться консервативным традициям Юга. Анна становится почтальоном, что вызывает насмешки, но на протяжении более двадцати лет она объединяет жителей, доставляя письма солдат, открытки эмигрантов и тайные послания. Это история женщины, стремящейся к свободе, семьи Греко и двух братьев, влюбленных в одну женщину.
+                            </p>
+                        </div>
+
+                        <div class="product__block">
+                            <h3 class="specif__title">Характеристики</h3>
+                            <div class="specif__block">
+                                <div class="specif__str">
+                                    <p class="specif__name">Цена</p>
+                                    <p class="book-price b">889 ₽</p>
+                                </div>
+                                <div class="specif__str">
+                                    <p class="specif__name">Вес, г</p>
+                                    <p class="book-weight  b">490гр</p>
+                                </div>
+                                <div class="specif__str">
+                                    <p class="specif__name">Жанр</p>
+                                    <p class="book-genre b ">Роман</p>
+                                </div>
+                                <div class="specif__str">
+                                    <p class="specif__name">Формат</p>
+                                    <p class="book-format b ">Cтандартный</p>
+                                </div>
+                                <div class="specif__str">
+                                    <p class="specif__name">Название</p>
+                                    <p class="book-name b ">Почтальонша</p>
+                                </div>
+                                <div class="specif__str">
+                                    <p class="specif__name">Автор</p>
+                                    <p class="book-author b">Франческо Джанонне</p>
+                                </div>
+                                <div class="specif__str">
+                                    <p class="specif__name">Количество страниц</p>
+                                    <p class="book-pages b">590</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button href="#" class="red-btn red-btn__product">
+                            Добавить в корину
+                        </button>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end-product -->
+
+        <!-- new -->
+        <div class="catalog">
+            <div class="container">
+
+                <h2 class="block__title">
+                    Новинки
+                </h2>
+
+                <div class="catalog__inner">
+
+                    <div class="ctg-card">
+                        <img src="assets/img/main/catalog/card1.png" alt="card" class="ctg-card__img">
+
+                        <h3 class="ctg-card__title">
+                            Стеклянный дворец
+                        </h3>
+
+                        <p class="ctg-card__author">
+                            Амитав Гош
+                        </p>
+
+                        <div class="ctg-card__bott">
+                            <p class="price">
+                                1149 ₽
+                            </p>
+
+                            <a href="#" class="blue-btn">
+                                Купить
+                            </a>
+                        </div>  
+                    </div>
+
+                    <div class="ctg-card ctg-card__none-mob">
+                        <img src="assets/img/main/catalog/card5.png" alt="card" class="ctg-card__img">
+
+                        <h3 class="ctg-card__title">
+                            Последний сеанс
+                        </h3>
+
+                        <p class="ctg-card__author">
+                            Агата Кристи
+                        </p>
+
+                        <div class="ctg-card__bott">
+                            <p class="price">
+                                329 ₽
+                            </p>
+
+                            <a href="#" class="blue-btn">
+                                Купить
+                            </a>
+                        </div>  
+                    </div>
+
+                    <div class="ctg-card ctg-card__none">
+                        <img src="assets/img/main/catalog/card3.png" alt="card" class="ctg-card__img">
+
+                        <h3 class="ctg-card__title">
+                            Вегетация
+                        </h3>
+
+                        <p class="ctg-card__author">
+                            Алексей Иванов
+                        </p>
+
+                        <div class="ctg-card__bott">
+                            <p class="price">
+                                849 ₽
+                            </p>
+
+                            <a href="#" class="blue-btn">
+                                Купить
+                            </a>
+                        </div>  
+                    </div>
+
+                </div>
+
+                <div class="ctg-str">
+                    <a href="#" class="ctg-str__l">
+                        <img src="assets/img/main/catalog/arrow-square-left.svg" alt="arrow">
+                    </a>
+                    <a href="#" class="ctg-str__r">
+                        <img src="assets/img/main/catalog/arrow-square-right.svg" alt="arrow">
+                    </a>
+                </div>
+
+            </div>
+        </div>
+        <!-- end-new -->
+        
+
+    </main>
+    <!-- end-main -->
+
+    <!-- footer -->
+    <div class="footer">
+        <div class="container">
+            <div class="footer__inner">
+                <a href="#" class="logo">
+                    <img src="assets/img/footer/logo.svg" alt="logo">
+                </a>
+    
+                <div class="footer-menu footer-menu__none1">
+                    <a href="main.html" class="menu-link__footer">Главная</a>
+                    <a href="about.html" class="menu-link__footer">О нас</a>
+                    <a href="catalog.html" class="menu-link__footer">Каталог</a>
+                    <a href="contact.html" class="menu-link__footer">Контакты</a>
+                </div>
+    
+    
+                <div class="footer-icon">
+                    <a href="main.html" class="footer-icon__img">
+                        <img src="assets/img/footer/what.svg" alt="footer-icon__img">
+                    </a>
+                    <a href="" class="footer-icon__img">
+                        <img src="assets/img/footer/vk.svg" alt="footer-icon__img">
+                    </a>
+                    <a href="#" class="footer-icon__img">
+                        <img src="assets/img/footer/tg.svg" alt="footer-icon__img">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-menu footer-menu__none2">
+            <a href="main.html" class="menu-link__footer">Главная</a>
+            <a href="about.html" class="menu-link__footer">О нас</a>
+            <a href="catalog.html" class="menu-link__footer">Каталог</a>
+            <a href="contact.html" class="menu-link__footer">Контакты</a>
+        </div>
+
+        <div class="line"></div>
+
+        <div class="container">
+            <a href="#" class="copy">
+                Киямов 2025
+            </a>
+        </div>
+    </div>
+    <!-- end-footer -->
+
+</body>
+
+
+</html>

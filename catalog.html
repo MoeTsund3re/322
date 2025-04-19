@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Буквица</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/contact.css">
+    <link rel="stylesheet" href="assets/css/product.css">
+    <link rel="stylesheet" href="assets/css/basket.css">
+    <link rel="stylesheet" href="assets/css/catalog.css">
+    <link rel="shortcut icon" href="assets/img/baza/favicon.svg" type="image/x-icon">
+
+</head>
+ 
+<body>
+
+    <!-- header -->
+    <div class="header">
+        <div class="container">
+            <div class="header__inner">
+
+                <a href="main.html" class="logo">
+                    <img src="assets/img/baza/logo.svg" alt="logo">
+                </a>
+
+                <div class="menu">
+                    <a href="main.html" class="menu-link">Главная</a>
+                    <a href="about.html" class="menu-link">О нас</a>
+                    <a href="catalog.html" class="menu-link">Каталог</a>
+                    <a href="contact.html" class="menu-link">Контакты</a>
+                </div>
+
+                <div class="header-right">
+                    <div class="header-btn__group">
+                        <button class="user">
+                            <img src="assets/img/header/user.svg" alt="user">
+                        </button>
+                        <a href="basket.html" class="bag">
+                            <img src="assets/img/header/bag.svg" alt="bag">
+                        </a>
+                    </div>
+    
+                    <div class="menu-mob">
+                        <input type="checkbox" id="burger">
+                        <label for="burger"></label>
+                        <div class="menu_nav">
+                            <nav>
+                                <a class="active" href="main.html">Главная</a>
+                                <a href="about.html">О нас</a>
+                                <a href="catalog.html">Каталог</a>
+                                <a href="contact.html">Контакты</a>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    <!-- end-header -->
+
+    <!-- header-aut -->
+    <div class="container">
+        <div class="modal modal-aut">
+            <div class="modal__content">
+                <img src="assets/img/aut,reg/close.svg" class="exit-modal exit-modal-aut"></img>
+                <h2 class="aut__title">
+                    Авторизация
+                </h2>
+                <form class="form-autreg" action="">
+                    <input class="input-autreg" type="text" placeholder="Ваше имя">
+                    <input class="input-autreg" type="password" name="" id="" placeholder="Введите пароль">
+                    <a href="#" class="aut-btn">Войти</a>
+                    <button class="reg__active-btn">Регистрация</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- end-header-aut -->
+
+    <!-- header-reg -->
+    <div class="container">
+        <div class="modal modal-reg">
+            <div class="modal__content">
+                <img src="assets/img/aut,reg/close.svg" class="exit-modal exit-modal-reg"></img>
+                <h2 class="reg__title">
+                    Регистрация
+                </h2>
+                <form class="form-autreg" action="">
+                    <input class="input-autreg" type="text" placeholder="Ваше имя">
+                    <input class="input-autreg" type="email" name="" id="" placeholder=" Ваш email">
+                    <input class="input-autreg" type="password" name="" id="" placeholder="Введите пароль">
+                    <input class="input-autreg" type="password" name="" id="" placeholder="Повторите пароль">
+                    <div class="sogl">
+                        <input type="checkbox" name="" id="">
+                        <a class="sogl-link" href="#">Я согласен с политикой конфиденциальности
+                        </a>
+                    </div>
+                    <a href="#" class="reg-btn">Отправить</a>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let modalAut = document.querySelector(".modal-aut");
+        let modalReg = document.querySelector(".modal-reg");
+        let exitModalAut = document.querySelector(".exit-modal-aut");
+        let exitModalReg = document.querySelector(".exit-modal-reg");
+        let user = document.querySelector(".user");
+        let regActivebtn = document.querySelector(".reg__active-btn");
+    
+        user.addEventListener('click', () => {
+            modalAut.style.display = "flex";
+            modalReg.style.display = "none";
+        });
+    
+        regActivebtn.addEventListener('click', () => {
+            modalReg.style.display = "flex";
+            modalAut.style.display = "none";
+        });
+    
+        exitModalAut.addEventListener('click', () => {
+            modalAut.style.display = "none";
+        });
+    
+        exitModalReg.addEventListener('click', () => {
+            modalReg.style.display = "none";
+        });
+    
+        modalAut.addEventListener('click', (event) => {
+            if (event.target === modalAut) {
+                modalAut.style.display = "none";
+            }
+        });
+    
+        modalReg.addEventListener('click', (event) => {
+            if (event.target === modalReg) {
+                modalReg.style.display = "none";
+            }
+        });
+    </script>
+    <!-- end-header-reg -->
+
+    <!-- main -->
+    <main class="main">
+
+        <!-- exit -->
+        <div class="container">
+            <div class="exit">
+                <a class="exit__link" href="main.html">
+                    <span>← </span>вернуться
+                </a>
+            </div>
+        </div>
+        <!-- end-exit -->
+
+        <!-- catalog -->
+        <div class="container">
+            <div class="catalog-page">
+                <div class="catalog__left">
+                    <div class="filter-block">
+                        <h3 class="filter-name">
+                            Цена
+                        </h3>
+                        <input type="range" id="min-price" min="0" max="1000" value="100" step="10">
+                        <div class="price-filter">
+                            <input type="text">
+                            <div class="s">—</div>
+                            <input type="text">
+                        </div>
+                    </div>
+                    <div class="filter-block">
+                        <h3 class="filter-name">
+                            Жанр
+                        </h3>
+                        <div class="filter-block__box">
+                            <input type="checkbox" name="" id="">
+                            <p class="filter-block__text">Роман</p>
+                        </div>
+                        <div class="filter-block__box">
+                            <input type="checkbox" name="" id="">
+                            <p class="filter-block__text">Повесть</p>
+                        </div>
+                        <div class="filter-block__box">
+                            <input type="checkbox" name="" id="">
+                            <p class="filter-block__text">Новелла</p>
+                        </div>
+                        <div class="filter-block__box">
+                            <input type="checkbox" name="" id="">
+                            <p class="filter-block__text">Комедия</p>
+                        </div>
+                        <div class="filter-block__box">
+                            <input type="checkbox" name="" id="">
+                            <p class="filter-block__text">Трагедия</p>
+                        </div>
+                        <div class="filter-block__box">
+                            <input type="checkbox" name="" id="">
+                            <p class="filter-block__text">Фантастика</p>
+                        </div>
+                        <div class="filter-block__box">
+                            <input type="checkbox" name="" id="">
+                            <p class="filter-block__text">Ужасы</p>
+                        </div>
+                        <div class="filter-block__box">
+                            <input type="checkbox" name="" id="">
+                            <p class="filter-block__text">Детектив</p>
+                        </div>
+                    </div>
+                    <div class="filter-block">
+                        <h3 class="filter-name">
+                            Автор
+                        </h3>
+                        <div class="filter-block__box">
+                            <input type="checkbox" name="" id="">
+                            <p class="filter-block__text">Агата Кристи</p>
+                        </div>
+                        <div class="filter-block__box">
+                            <input type="checkbox" name="" id="">
+                            <p class="filter-block__text">Барбара Картленд</p>
+                        </div>
+                        <div class="filter-block__box">
+                            <input type="checkbox" name="" id="">
+                            <p class="filter-block__text">Гарольд Роббинс</p>
+                        </div>
+                        <div class="filter-block__box">
+                            <input type="checkbox" name="" id="">
+                            <p class="filter-block__text">Жорж Сименон</p>
+                        </div>
+                        <div class="filter-block__box">
+                            <input type="checkbox" name="" id="">
+                            <p class="filter-block__text">Джоан Роулинг</p>
+                        </div>
+                        <div class="filter-block__box">
+                            <input type="checkbox" name="" id="">
+                            <p class="filter-block__text">Пауло Коэльо</p>
+                        </div>
+                        <div class="filter-block__box">
+                            <input type="checkbox" name="" id="">
+                            <p class="filter-block__text">Стивен Кинг</p>
+                        </div>
+                        <div class="filter-block__box">
+                            <input type="checkbox" name="" id="">
+                            <p class="filter-block__text">Уильям Шекспир
+                            </p>
+                        </div>
+                        <div class="filter-block__box">
+                            <input type="checkbox" name="" id="">
+                            <p class="filter-block__text">Даниэлла Стил</p>
+                        </div>
+                    </div>
+                    <div class="filter-block">
+                        <h3 class="filter-name">
+                            Возраст
+                        </h3>
+                        <div class="filter-block__box">
+                            <input type="checkbox" name="" id="">
+                            <p class="filter-block__text">+18</p>
+                        </div>
+                        <div class="filter-block__box">
+                            <input type="checkbox" name="" id="">
+                            <p class="filter-block__text">+16</p>
+                        </div>
+                        <div class="filter-block__box">
+                            <input type="checkbox" name="" id="">
+                            <p class="filter-block__text">+12</p>
+                        </div>
+                    </div>
+                    <div class="filter-block">
+                        <h3 class="filter-name">
+                            Количество страниц
+                        </h3>
+                        <div class="filter-block__box">
+                            <input type="checkbox" name="" id="">
+                            <p class="filter-block__text">от 250</p>
+                        </div>
+                        <div class="filter-block__box">
+                            <input type="checkbox" name="" id="">
+                            <p class="filter-block__text">от 300</p>
+                        </div>
+                        <div class="filter-block__box">
+                            <input type="checkbox" name="" id="">
+                            <p class="filter-block__text">от 400</p>
+                        </div>
+                    </div>
+                    <div class="filter-block">
+                        <h3 class="filter-name">
+                            Формат
+                        </h3>
+                        <div class="filter-block__box">
+                            <input type="checkbox" name="" id="">
+                            <p class="filter-block__text">Стандартный</p>
+                        </div>
+                        <div class="filter-block__box">
+                            <input type="checkbox" name="" id="">
+                            <p class="filter-block__text">Уменьшенный</p>
+                        </div>
+                        <div class="filter-block__box">
+                            <input type="checkbox" name="" id="">
+                            <p class="filter-block__text">Увеличенный</p>
+                        </div>
+                    </div>
+                    <div class="filter-block">
+                        <h3 class="filter-name">
+                            Категории
+                        </h3>
+                        <div class="filter-block__box">
+                            <input type="checkbox" name="" id="">
+                            <p class="filter-block__text">Отечественный</p>
+                        </div>
+                        <div class="filter-block__box">
+                            <input type="checkbox" name="" id="">
+                            <p class="filter-block__text">Зарубежный</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="catalog__right">
+                    <div class="catalog__right-top">
+
+                        <img src="assets/img/catalog/burger-ctg.svg" id="openModal"></img>
+
+                        <div id="modal" class="modal">
+                            <div class="modal-content">
+                                <div class="modal-top">
+                                    <a href="#" class="cancel">
+                                        Сбросить
+                                    </a>
+                                    <span class="close">
+                                        <img src="assets/img/catalog/x.svg" alt="x">
+                                    </span>
+                                </div>
+                                <div class="filter-ctg__adap">
+                                    <div class="filter-block">
+                                        <h3 class="filter-name">
+                                            Цена
+                                        </h3>
+                                        <input type="range" id="min-price" min="0" max="1000" value="100" step="10">
+                                        <div class="price-filter">
+                                            <input type="text">
+                                            <div class="s">—</div>
+                                            <input type="text">
+                                        </div>
+                                    </div>
+                                    <div class="filter-block">
+                                        <h3 class="filter-name">
+                                            Жанр
+                                        </h3>
+                                        <div class="filter-block__box">
+                                            <input type="checkbox" name="" id="">
+                                            <p class="filter-block__text">Роман</p>
+                                        </div>
+                                        <div class="filter-block__box">
+                                            <input type="checkbox" name="" id="">
+                                            <p class="filter-block__text">Повесть</p>
+                                        </div>
+                                        <div class="filter-block__box">
+                                            <input type="checkbox" name="" id="">
+                                            <p class="filter-block__text">Новелла</p>
+                                        </div>
+                                        <div class="filter-block__box">
+                                            <input type="checkbox" name="" id="">
+                                            <p class="filter-block__text">Комедия</p>
+                                        </div>
+                                        <div class="filter-block__box">
+                                            <input type="checkbox" name="" id="">
+                                            <p class="filter-block__text">Трагедия</p>
+                                        </div>
+                                        <div class="filter-block__box">
+                                            <input type="checkbox" name="" id="">
+                                            <p class="filter-block__text">Фантастика</p>
+                                        </div>
+                                        <div class="filter-block__box">
+                                            <input type="checkbox" name="" id="">
+                                            <p class="filter-block__text">Ужасы</p>
+                                        </div>
+                                        <div class="filter-block__box">
+                                            <input type="checkbox" name="" id="">
+                                            <p class="filter-block__text">Детектив</p>
+                                        </div>
+                                    </div>
+                                    <div class="filter-block">
+                                        <h3 class="filter-name">
+                                            Автор
+                                        </h3>
+                                        <div class="filter-block__box">
+                                            <input type="checkbox" name="" id="">
+                                            <p class="filter-block__text">Агата Кристи</p>
+                                        </div>
+                                        <div class="filter-block__box">
+                                            <input type="checkbox" name="" id="">
+                                            <p class="filter-block__text">Барбара Картленд</p>
+                                        </div>
+                                        <div class="filter-block__box">
+                                            <input type="checkbox" name="" id="">
+                                            <p class="filter-block__text">Гарольд Роббинс</p>
+                                        </div>
+                                        <div class="filter-block__box">
+                                            <input type="checkbox" name="" id="">
+                                            <p class="filter-block__text">Жорж Сименон</p>
+                                        </div>
+                                        <div class="filter-block__box">
+                                            <input type="checkbox" name="" id="">
+                                            <p class="filter-block__text">Джоан Роулинг</p>
+                                        </div>
+                                        <div class="filter-block__box">
+                                            <input type="checkbox" name="" id="">
+                                            <p class="filter-block__text">Пауло Коэльо</p>
+                                        </div>
+                                        <div class="filter-block__box">
+                                            <input type="checkbox" name="" id="">
+                                            <p class="filter-block__text">Стивен Кинг</p>
+                                        </div>
+                                        <div class="filter-block__box">
+                                            <input type="checkbox" name="" id="">
+                                            <p class="filter-block__text">Уильям Шекспир
+                                            </p>
+                                        </div>
+                                        <div class="filter-block__box">
+                                            <input type="checkbox" name="" id="">
+                                            <p class="filter-block__text">Даниэлла Стил</p>
+                                        </div>
+                                    </div>
+                                    <div class="filter-block">
+                                        <h3 class="filter-name">
+                                            Возраст
+                                        </h3>
+                                        <div class="filter-block__box">
+                                            <input type="checkbox" name="" id="">
+                                            <p class="filter-block__text">+18</p>
+                                        </div>
+                                        <div class="filter-block__box">
+                                            <input type="checkbox" name="" id="">
+                                            <p class="filter-block__text">+16</p>
+                                        </div>
+                                        <div class="filter-block__box">
+                                            <input type="checkbox" name="" id="">
+                                            <p class="filter-block__text">+12</p>
+                                        </div>
+                                    </div>
+                                    <div class="filter-block">
+                                        <h3 class="filter-name">
+                                            Количество страниц
+                                        </h3>
+                                        <div class="filter-block__box">
+                                            <input type="checkbox" name="" id="">
+                                            <p class="filter-block__text">от 250</p>
+                                        </div>
+                                        <div class="filter-block__box">
+                                            <input type="checkbox" name="" id="">
+                                            <p class="filter-block__text">от 300</p>
+                                        </div>
+                                        <div class="filter-block__box">
+                                            <input type="checkbox" name="" id="">
+                                            <p class="filter-block__text">от 400</p>
+                                        </div>
+                                    </div>
+                                    <div class="filter-block">
+                                        <h3 class="filter-name">
+                                            Формат
+                                        </h3>
+                                        <div class="filter-block__box">
+                                            <input type="checkbox" name="" id="">
+                                            <p class="filter-block__text">Стандартный</p>
+                                        </div>
+                                        <div class="filter-block__box">
+                                            <input type="checkbox" name="" id="">
+                                            <p class="filter-block__text">Уменьшенный</p>
+                                        </div>
+                                        <div class="filter-block__box">
+                                            <input type="checkbox" name="" id="">
+                                            <p class="filter-block__text">Увеличенный</p>
+                                        </div>
+                                    </div>
+                                    <div class="filter-block">
+                                        <h3 class="filter-name">
+                                            Категории
+                                        </h3>
+                                        <div class="filter-block__box">
+                                            <input type="checkbox" name="" id="">
+                                            <p class="filter-block__text">Отечественный</p>
+                                        </div>
+                                        <div class="filter-block__box">
+                                            <input type="checkbox" name="" id="">
+                                            <p class="filter-block__text">Зарубежный</p>
+                                        </div>
+                                    </div>
+                                    <div class="btn-block">
+                                        <button href="#" class="filter-btn">
+                                            Применить
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <script>
+
+                            var modal = document.getElementById("modal");
+                            var btn = document.getElementById("openModal");
+                            var span = document.getElementsByClassName("close")[0];
+
+                            btn.onclick = function() {
+                                modal.style.display = "flex";
+                            }
+
+                            span.onclick = function() {
+                                modal.style.display = "none";
+                            }
+
+                            window.onclick = function(event) {
+                                if (event.target == modal) {
+                                    modal.style.display = "none";
+                                }
+                            }
+
+                        </script>
+
+
+
+                        <div class="search-filter">
+                            <div class="search-input">
+                                <input class="search-input__l" type="text" id="search" placeholder="Искать книги...">
+                                <button type="button" class="search-button">
+                                    <img src="assets/img/catalog/search.svg" alt="Поиск">
+                                </button>
+                            </div>
+                            <div class="category-select">
+                                <select id="category">
+                                    <option class="cat-name">Порядок: по умолчанию</option>
+                                    <option class="cat-name" value="newest">Порядок: по новизне</option>
+                                    <option class="cat-name" value="rating">Порядок: по убыванию</option>
+                                    <option class="cat-name" value="price">Порядок: по новизне</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="category-select category-select__mob">
+                        <select id="category">
+                            <option class="cat-name">Порядок: по умолчанию</option>
+                            <option class="cat-name" value="newest">Порядок: по новизне</option>
+                            <option class="cat-name" value="rating">Порядок: по убыванию</option>
+                            <option class="cat-name" value="price">Порядок: по новизне</option>
+                        </select>
+                    </div>
+                    <div class="catalog__inner">
+
+                        <div class="ctg-card">
+                            <img src="assets/img/main/catalog/card1.png" alt="card" class="ctg-card__img">
+    
+                            <h3 class="ctg-card__title">
+                                Стеклянный дворец
+                            </h3>
+    
+                            <p class="ctg-card__author">
+                                Амитав Гош
+                            </p>
+    
+                            <div class="ctg-card__bott">
+                                <p class="price">
+                                    1149 ₽
+                                </p>
+    
+                                <a href="#" class="blue-btn">
+                                    Купить
+                                </a>
+                            </div>  
+                        </div>
+    
+                        <div class="ctg-card">
+                            <img src="assets/img/main/catalog/card5.png" alt="card" class="ctg-card__img">
+    
+                            <h3 class="ctg-card__title">
+                                Последний сеанс
+                            </h3>
+    
+                            <p class="ctg-card__author">
+                                Агата Кристи
+                            </p>
+    
+                            <div class="ctg-card__bott">
+                                <p class="price">
+                                    329 ₽
+                                </p>
+    
+                                <a href="#" class="blue-btn">
+                                    Купить
+                                </a>
+                            </div>  
+                        </div>
+    
+                        <div class="ctg-card">
+                            <img src="assets/img/main/catalog/card3.png" alt="card" class="ctg-card__img">
+    
+                            <h3 class="ctg-card__title">
+                                Вегетация
+                            </h3>
+    
+                            <p class="ctg-card__author">
+                                Алексей Иванов
+                            </p>
+    
+                            <div class="ctg-card__bott">
+                                <p class="price">
+                                    849 ₽
+                                </p>
+    
+                                <a href="#" class="blue-btn">
+                                    Купить
+                                </a>
+                            </div>  
+                        </div>
+    
+                        <div class="ctg-card ctg-card__none-page">
+                            <img src="assets/img/main/catalog/card2.png" alt="card" class="ctg-card__img">
+    
+                            <h3 class="ctg-card__title">
+                                Почтальонша
+                            </h3>
+    
+                            <p class="ctg-card__author">
+                                Франческа Джанонне
+                            </p>
+    
+                            <div class="ctg-card__bott">
+                                <p class="price">
+                                    889 ₽
+                                </p>
+    
+                                <a href="#" class="blue-btn">
+                                    Купить
+                                </a>
+                            </div>  
+                        </div>
+    
+                        <div class="ctg-card ctg-card__none-page">
+                            <img src="assets/img/main/catalog/card6.png" alt="card" class="ctg-card__img">
+    
+                            <h3 class="ctg-card__title">
+                                Эйзен
+                            </h3>
+    
+                            <p class="ctg-card__author">
+                                Гузель Яхина
+                            </p>
+    
+                            <div class="ctg-card__bott">
+                                <p class="price">
+                                    1154 ₽
+                                </p>
+    
+                                <a href="#" class="blue-btn">
+                                    Купить
+                                </a>
+                            </div>  
+                        </div>
+    
+                        <div class="ctg-card ctg-card__none-page">
+                            <img src="assets/img/main/catalog/card4.png" alt="card" class="ctg-card__img">
+    
+                            <h3 class="ctg-card__title">
+                                Любовь и голуби
+                            </h3>
+    
+                            <p class="ctg-card__author">
+                                Владимир Гуркин
+                            </p>
+    
+                            <div class="ctg-card__bott">
+                                <p class="price">
+                                    768 ₽
+                                </p>
+    
+                                <a href="#" class="blue-btn">
+                                    Купить
+                                </a>
+                            </div>  
+                        </div>
+    
+                    </div>
+                    <div class="pag">
+                        <a href="#" class="pag-num pag-num__active">
+                            1
+                        </a>
+                        <a href="#" class="pag-num">
+                            2
+                        </a>
+                        <a href="#" class="pag-num__next">
+                            <img src="assets/img/catalog/arrow-right.svg" alt="pag-num__icon">
+                        </a>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+        <!-- end-catalog -->
+        
+
+    </main>
+    <!-- end-main -->
+
+    <!-- footer -->
+    <div class="footer">
+        <div class="container">
+            <div class="footer__inner">
+                <a href="#" class="logo">
+                    <img src="assets/img/footer/logo.svg" alt="logo">
+                </a>
+    
+                <div class="footer-menu footer-menu__none1">
+                    <a href="main.html" class="menu-link__footer">Главная</a>
+                    <a href="about.html" class="menu-link__footer">О нас</a>
+                    <a href="catalog.html" class="menu-link__footer">Каталог</a>
+                    <a href="contact.html" class="menu-link__footer">Контакты</a>
+                </div>
+    
+    
+                <div class="footer-icon">
+                    <a href="main.html" class="footer-icon__img">
+                        <img src="assets/img/footer/what.svg" alt="footer-icon__img">
+                    </a>
+                    <a href="" class="footer-icon__img">
+                        <img src="assets/img/footer/vk.svg" alt="footer-icon__img">
+                    </a>
+                    <a href="#" class="footer-icon__img">
+                        <img src="assets/img/footer/tg.svg" alt="footer-icon__img">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-menu footer-menu__none2">
+            <a href="main.html" class="menu-link__footer">Главная</a>
+            <a href="about.html" class="menu-link__footer">О нас</a>
+            <a href="catalog.html" class="menu-link__footer">Каталог</a>
+            <a href="contact.html" class="menu-link__footer">Контакты</a>
+        </div>
+
+        <div class="line"></div>
+
+        <div class="container">
+            <a href="#" class="copy">
+                Киямов 2025
+            </a>
+        </div>
+    </div>
+    <!-- end-footer -->
+
+</body>
+
+
+</html>

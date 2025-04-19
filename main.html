@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Буквица</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="shortcut icon" href="assets/img/baza/favicon.svg" type="image/x-icon">
+
+</head>
+ 
+<body>
+
+    <!-- header -->
+    <div class="header">
+        <div class="container">
+            <div class="header__inner">
+
+                <a href="main.html" class="logo">
+                    <img src="assets/img/baza/logo.svg" alt="logo">
+                </a>
+
+                <div class="menu">
+                    <a href="#" class="menu-link">Главная</a>
+                    <a href="about.html" class="menu-link">О нас</a>
+                    <a href="catalog.html" class="menu-link">Каталог</a>
+                    <a href="contact.html" class="menu-link">Контакты</a>
+                </div>
+
+                <div class="header-right">
+                    <div class="header-btn__group">
+                        <button class="user">
+                            <img src="assets/img/header/user.svg" alt="user">
+                        </button>
+                        <a href="basket.html" class="bag">
+                            <img src="assets/img/header/bag.svg" alt="bag">
+                        </a>
+                    </div>
+    
+                    <div class="menu-mob">
+                        <input type="checkbox" id="burger">
+                        <label for="burger"></label>
+                        <div class="menu_nav">
+                            <nav>
+                                <a class="active" href="#">Главная</a>
+                                <a href="about.html">О нас</a>
+                                <a href="catalog.html">Каталог</a>
+                                <a href="contact.html">Контакты</a>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    <!-- end-header -->
+
+     <!-- header-aut -->
+     <div class="container">
+        <div class="modal modal-aut">
+            <div class="modal__content">
+                <img src="assets/img/aut,reg/close.svg" class="exit-modal exit-modal-aut"></img>
+                <h2 class="aut__title">
+                    Авторизация
+                </h2>
+                <form class="form-autreg" action="">
+                    <input class="input-autreg" type="text" placeholder="Ваше имя">
+                    <input class="input-autreg" type="password" name="" id="" placeholder="Введите пароль">
+                    <a href="#" class="aut-btn">Войти</a>
+                    <button class="reg__active-btn">Регистрация</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- end-header-aut -->
+
+    <!-- header-reg -->
+    <div class="container">
+        <div class="modal modal-reg">
+            <div class="modal__content">
+                <img src="assets/img/aut,reg/close.svg" class="exit-modal exit-modal-reg"></img>
+                <h2 class="reg__title">
+                    Регистрация
+                </h2>
+                <form class="form-autreg" action="">
+                    <input class="input-autreg" type="text" placeholder="Ваше имя">
+                    <input class="input-autreg" type="email" name="" id="" placeholder=" Ваш email">
+                    <input class="input-autreg" type="password" name="" id="" placeholder="Введите пароль">
+                    <input class="input-autreg" type="password" name="" id="" placeholder="Повторите пароль">
+                    <div class="sogl">
+                        <input type="checkbox" name="" id="">
+                        <a class="sogl-link" href="#">Я согласен с политикой конфиденциальности
+                        </a>
+                    </div>
+                    <a href="#" class="reg-btn">Отправить</a>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let modalAut = document.querySelector(".modal-aut");
+        let modalReg = document.querySelector(".modal-reg");
+        let exitModalAut = document.querySelector(".exit-modal-aut");
+        let exitModalReg = document.querySelector(".exit-modal-reg");
+        let user = document.querySelector(".user");
+        let regActivebtn = document.querySelector(".reg__active-btn");
+    
+        user.addEventListener('click', () => {
+            modalAut.style.display = "flex";
+            modalReg.style.display = "none";
+        });
+    
+        regActivebtn.addEventListener('click', () => {
+            modalReg.style.display = "flex";
+            modalAut.style.display = "none";
+        });
+    
+        exitModalAut.addEventListener('click', () => {
+            modalAut.style.display = "none";
+        });
+    
+        exitModalReg.addEventListener('click', () => {
+            modalReg.style.display = "none";
+        });
+    
+        modalAut.addEventListener('click', (event) => {
+            if (event.target === modalAut) {
+                modalAut.style.display = "none";
+            }
+        });
+    
+        modalReg.addEventListener('click', (event) => {
+            if (event.target === modalReg) {
+                modalReg.style.display = "none";
+            }
+        });
+    </script>
+    <!-- end-header-reg -->
+
+    <!-- main -->
+    <main class="main">
+
+        <!-- banner -->
+        <div class="banner">
+            <div class="container">
+                <div class="banner__inner">
+        
+                    <a href="#" class="banner-arrow__l" id="arrow-left">
+                        <img src="assets/img/main/banner/right.svg" alt="arrow">
+                    </a>
+        
+                    <div class="banner__content">
+                        <h1 class="banner__title">
+                            Мир книг: Откройте новое
+                        </h1>
+                        <div class="banner__text">
+                            В нашем магазине вы найдете уникальные книги на любой вкус от классики до современных бестселлеров. Погружайтесь в чтение!
+                        </div>
+                        <a href="catalog.html" class="red-btn">
+                            Оформить заказ
+                        </a>
+                    </div>
+        
+                    <div class="banner__img-container">
+                        <img class="banner-img" src="assets/img/main/banner/banner-img.png" alt="banner-img" id="banner-image">
+                        
+                        <div class="banner-str">
+                            <a href="#" class="banner-str__l" id="mobile-arrow-left">
+                                <img src="assets/img/main/banner/right.svg" alt="arrow">
+                            </a>
+                            <a href="#" class="banner-str__r" id="mobile-arrow-right">
+                                <img src="assets/img/main/banner/left.svg" alt="arrow">
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <a href="#" class="banner-arrow__r" id="arrow-right">
+                        <img src="assets/img/main/banner/left.svg" alt="arrow">
+                    </a>
+        
+                </div>
+            </div>
+        </div>
+        
+
+        <script>
+
+        const images = [
+            'assets/img/main/banner/banner-img.png',
+            'assets/img/main/banner/banner-img-sl1.png',
+            'assets/img/main/banner/banner-img-sl2.png',
+        ]; 
+
+        let currentIndex = 0; 
+
+        const bannerImage = document.getElementById('banner-image');
+        const arrowLeft = document.getElementById('arrow-left');
+        const arrowRight = document.getElementById('arrow-right');
+        const mobileArrowLeft = document.getElementById('mobile-arrow-left');
+        const mobileArrowRight = document.getElementById('mobile-arrow-right');
+
+        function updateImage() {
+            bannerImage.src = images[currentIndex];
+        }
+
+        arrowRight.addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % images.length;
+            updateImage();
+        });
+
+        arrowLeft.addEventListener('click', () => {
+        currentIndex = (currentIndex - 1 + images.length) % images.length;  
+            updateImage();
+        });
+
+        mobileArrowRight.addEventListener('click', () => {
+        currentIndex = (currentIndex + 1) % images.length; 
+            updateImage();
+        });
+
+        mobileArrowLeft.addEventListener('click', () => {
+        currentIndex = (currentIndex - 1 + images.length) % images.length; 
+            updateImage();
+        });
+
+        updateImage();
+
+        </script>
+        
+        <!-- end-banner -->
+        
+        <!-- about -->
+        <div class="about">
+            <div class="container">
+                <div class="about__inner">
+                    <div class="about__content">
+                        <h2 class="about__title">
+                            О нас
+                        </h2>
+
+                        <p class="about__text">
+                            Буквица — это интернет-магазин, предлагающий широкий ассортимент товаров для творчества и рукоделия. Здесь вы найдете все необходимое: канцелярские принадлежности, материалы для хобби и искусства. Удобный интерфейс и быстрая доставка делают покупки легкими и приятными. Откройте мир творчества вместе с Буквицей!
+                        </p>
+
+                        <a href="#" class="red-btn">
+                            Оформить заказ
+                        </a>
+
+                    </div>
+
+                    <img class="about-img" src="assets/img/main/about/about-img.png" alt="about-img">
+
+                </div>
+            </div>
+        </div>
+        <!-- end-about -->
+
+        <!-- catalog -->
+        <div class="catalog">
+            <div class="container">
+
+                <h2 class="block__title">
+                    Каталог
+                </h2>
+
+                <div class="filter">
+                    <a href="#" class="filter-link filter-active" id="foreign-link">Зарубежные</a>
+                    <a href="#" class="filter-link" id="domestic-link">Отечественные</a>
+                </div>
+                
+                <script>
+
+                    const foreignLink = document.getElementById('foreign-link');
+                    const domesticLink = document.getElementById('domestic-link');
+
+
+                    function setActiveLink(activeLink) {
+
+                        foreignLink.classList.remove('filter-active');
+                        domesticLink.classList.remove('filter-active');
+                    
+                        activeLink.classList.add('filter-active');
+                    }
+
+                    foreignLink.addEventListener('click', (event) => {
+                        event.preventDefault();
+                        setActiveLink(foreignLink);
+                    });
+
+                    domesticLink.addEventListener('click', (event) => {
+                        event.preventDefault();
+                        setActiveLink(domesticLink);
+                    });
+
+                </script>
+
+                <div class="catalog__inner">
+
+                    <div class="ctg-card">
+                        <img src="assets/img/main/catalog/card1.png" alt="card" class="ctg-card__img">
+
+                        <h3 class="ctg-card__title">
+                            Стеклянный дворец
+                        </h3>
+
+                        <p class="ctg-card__author">
+                            Амитав Гош
+                        </p>
+
+                        <div class="ctg-card__bott">
+                            <p class="price">
+                                1149 ₽
+                            </p>
+
+                            <a href="product.html" class="blue-btn">
+                                Купить
+                            </a>
+                        </div>  
+                    </div>
+
+                    <div class="ctg-card ctg-card__none-mob">
+                        <img src="assets/img/main/catalog/card5.png" alt="card" class="ctg-card__img">
+
+                        <h3 class="ctg-card__title">
+                            Последний сеанс
+                        </h3>
+
+                        <p class="ctg-card__author">
+                            Агата Кристи
+                        </p>
+
+                        <div class="ctg-card__bott">
+                            <p class="price">
+                                329 ₽
+                            </p>
+
+                            <a href="#" class="blue-btn">
+                                Купить
+                            </a>
+                        </div>  
+                    </div>
+
+                    <div class="ctg-card ctg-card__none">
+                        <img src="assets/img/main/catalog/card3.png" alt="card" class="ctg-card__img">
+
+                        <h3 class="ctg-card__title">
+                            Вегетация
+                        </h3>
+
+                        <p class="ctg-card__author">
+                            Алексей Иванов
+                        </p>
+
+                        <div class="ctg-card__bott">
+                            <p class="price">
+                                849 ₽
+                            </p>
+
+                            <a href="#" class="blue-btn">
+                                Купить
+                            </a>
+                        </div>  
+                    </div>
+
+                    <div class="ctg-card ctg-card__none">
+                        <img src="assets/img/main/catalog/card2.png" alt="card" class="ctg-card__img">
+
+                        <h3 class="ctg-card__title">
+                            Почтальонша
+                        </h3>
+
+                        <p class="ctg-card__author">
+                            Франческа Джанонне
+                        </p>
+
+                        <div class="ctg-card__bott">
+                            <p class="price">
+                                889 ₽
+                            </p>
+
+                            <a href="#" class="blue-btn">
+                                Купить
+                            </a>
+                        </div>  
+                    </div>
+
+                    <div class="ctg-card ctg-card__none">
+                        <img src="assets/img/main/catalog/card6.png" alt="card" class="ctg-card__img">
+
+                        <h3 class="ctg-card__title">
+                            Эйзен
+                        </h3>
+
+                        <p class="ctg-card__author">
+                            Гузель Яхина
+                        </p>
+
+                        <div class="ctg-card__bott">
+                            <p class="price">
+                                1154 ₽
+                            </p>
+
+                            <a href="#" class="blue-btn">
+                                Купить
+                            </a>
+                        </div>  
+                    </div>
+
+                    <div class="ctg-card ctg-card__none">
+                        <img src="assets/img/main/catalog/card4.png" alt="card" class="ctg-card__img">
+
+                        <h3 class="ctg-card__title">
+                            Любовь и голуби
+                        </h3>
+
+                        <p class="ctg-card__author">
+                            Владимир Гуркин
+                        </p>
+
+                        <div class="ctg-card__bott">
+                            <p class="price">
+                                768 ₽
+                            </p>
+
+                            <a href="#" class="blue-btn">
+                                Купить
+                            </a>
+                        </div>  
+                    </div>
+
+                </div>
+
+                <div class="ctg-str">
+                    <a href="#" class="ctg-str__l" id="prev-btn">
+                        <img src="assets/img/main/catalog/arrow-square-left.svg" alt="arrow">
+                    </a>
+                    <a href="#" class="ctg-str__r" id="next-btn">
+                        <img src="assets/img/main/catalog/arrow-square-right.svg" alt="arrow">
+                    </a>
+                </div>
+
+                <div class="block-btn">
+                    <a href="#" class="black-btn сtg-black">Посмотреть еще</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- end-catalog -->
+
+        <!-- plus -->
+        <div class="plus">
+            <div class="container">
+                
+                <h2 class="block__title">
+                    Наши преимущетсва
+                </h2>
+
+                <div class="plus__inner">
+                    <div class="plus-card">
+                        <img src="assets/img/main/plus/card1.png" alt="plus-card__img" class="plus-card__img">
+
+                        <h3 class="plus-card__title">
+                            Широкий ассортимент
+                        </h3>
+                    </div>
+
+                    <div class="plus-card">
+                        <img src="assets/img/main/plus/card2.png" alt="plus-card__img" class="plus-card__img">
+
+                        <h3 class="plus-card__title">
+                            Удобство покупок
+                        </h3>
+                    </div>
+
+                    <div class="plus-card">
+                        <img src="assets/img/main/plus/card3.png" alt="plus-card__img" class="plus-card__img">
+
+                        <h3 class="plus-card__title">
+                            Отзывы и рекомендации
+                        </h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end-plus -->
+
+    </main>
+    <!-- end-main -->
+
+    <!-- footer -->
+    <div class="footer">
+        <div class="container">
+            <div class="footer__inner">
+                <a href="#" class="logo">
+                    <img src="assets/img/footer/logo.svg" alt="logo">
+                </a>
+    
+                <div class="footer-menu footer-menu__none1">
+                    <a href="main.html" class="menu-link__footer">Главная</a>
+                    <a href="about.html" class="menu-link__footer">О нас</a>
+                    <a href="catalog.html" class="menu-link__footer">Каталог</a>
+                    <a href="contact.html" class="menu-link__footer">Контакты</a>
+                </div>
+    
+    
+                <div class="footer-icon">
+                    <a href="main.html" class="footer-icon__img">
+                        <img src="assets/img/footer/what.svg" alt="footer-icon__img">
+                    </a>
+                    <a href="" class="footer-icon__img">
+                        <img src="assets/img/footer/vk.svg" alt="footer-icon__img">
+                    </a>
+                    <a href="#" class="footer-icon__img">
+                        <img src="assets/img/footer/tg.svg" alt="footer-icon__img">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-menu footer-menu__none2">
+            <a href="main.html" class="menu-link__footer">Главная</a>
+            <a href="about.html" class="menu-link__footer">О нас</a>
+            <a href="catalog.html" class="menu-link__footer">Каталог</a>
+            <a href="contact.html" class="menu-link__footer">Контакты</a>
+        </div>
+
+        <div class="line"></div>
+
+        <div class="container">
+            <a href="#" class="copy">
+                Киямов 2025
+            </a>
+        </div>
+    </div>
+    <!-- end-footer -->
+
+</body>
+
+
+</html>

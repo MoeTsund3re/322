@@ -1,0 +1,298 @@
+/* exit */
+
+.exit{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.exit__link{
+    font-size: 24px;
+    font-weight: 700;
+    margin-top: 40px;
+    margin-bottom: 150px;
+    color: black;
+}
+
+.exit__link>span{
+    font-size: 30px;
+}
+
+
+/* contact */
+
+.contact{
+    margin-bottom: 200px;
+}
+
+.contact__inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sity{
+    font-weight: 600;
+    font-size: 48px;
+    color: #329FD9;
+}
+
+.contact__content>p{
+    font-size: 26px;
+    font-weight: 500;
+    color: #555151;
+}
+
+.tel-link, .email-link{
+    color: #555151;
+}
+
+.contact__content>p{
+    margin-top: 40px;
+}
+
+/* end-contact */
+
+
+/* call */
+
+.call{
+    margin-bottom: 200px;
+}
+
+.call__inner{
+    max-width: 850px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+.call__inner>input{
+    border-radius: 77px;
+    border: 2px solid black;
+    outline: none;
+    margin-bottom: 45px;
+    height: 80px;
+}
+
+.call__inner>input::placeholder{
+    padding: 26px 40px 29px 40px;
+    font-size: 24px;
+    font-weight: 500;
+    color: #8F8F8F;
+}
+
+.sogl{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 45px;
+}
+
+.sogl>input{
+    width: 30px;
+    height: 30px;
+}
+
+.sogl__text{
+    font-size: 33px;
+    color: black;
+    font-weight: 500;
+}
+
+.call-btn{
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background: linear-gradient(180deg, #329FD9, #4EC9FE);
+    font-size: 33px;
+    font-weight: 700;
+    border: none;
+    border-radius: 77px;
+    cursor: pointer;
+}
+
+/* .call-btn:hover{
+    background: linear-gradient(180deg, #329FD9, #4EC9FE);
+} */
+
+/* end-call */
+
+@media screen and (max-width:800px) {
+    /* exit */
+
+    .exit{
+        gap: 15px;
+    }
+
+    .exit__link{
+        font-size: 14px;
+        margin-top: 20px;
+        margin-bottom: 80px;
+    }
+
+    .exit__link>span{
+        font-size: 20px;
+    }
+
+    /* contact */
+
+    .contact{
+        margin-bottom: 100px;
+    }
+
+    .sity{
+        font-size: 28px;
+    }
+
+    .contact__content>p{
+        font-size: 16px;
+        margin-top: 30px;
+    }
+
+    .contact__img{
+        width: 380px;
+        height: 280px;
+    }
+
+    /* end-contact */
+
+
+    /* call */
+
+    .call{
+        margin-bottom: 100px;
+    }
+
+    .call__inner{
+        max-width: 500px;
+    }
+
+    .call__inner>input{
+        margin-bottom: 25px;
+        height: 43px;
+    }
+
+    .call__inner>input::placeholder{
+        padding:17px 23px 17px 23px;
+        font-size: 18px;
+    }
+
+    .sogl{
+        gap: 23px;
+        margin-bottom: 25px;
+    }
+
+    .sogl>input{
+        width: 20px;
+        height: 20px;
+    }
+
+    .sogl__text{
+        font-size: 20px;
+    }
+
+    .call-btn{
+        height: 43px;
+        font-size: 22px;
+    }
+
+    /* .call-btn:hover{
+        background: linear-gradient(180deg, #329FD9, #4EC9FE);
+    } */
+
+    /* end-call */
+}
+
+@media screen and (max-width:320px) {
+    /* exit */
+
+    .exit{
+        gap: 8px;
+    }
+
+    .exit__link{
+        font-size: 14px;
+        margin-bottom: 50px;
+    }
+
+    /* contact */
+
+    .contact{
+        margin-bottom: 70px;
+    }
+
+    .sity{
+        font-size: 28px;
+    }
+
+    .contact__inner{
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+    }
+
+    .contact__content>p{
+        font-size: 16px;
+        margin-top: 30px;
+    }
+
+    .contact__img{
+        margin-top: 40px;
+        max-width: 290px;
+        height: 224px;
+        display: flex;
+        justify-content: center;
+    }
+
+    /* end-contact */
+
+    /* call */
+
+    .call{
+        margin-bottom: 70px;
+    }
+
+    .call-title{
+        max-width: 100%;
+    }
+
+    .call__inner{
+        max-width: 320px;
+    }
+
+    .call__inner>input{
+        margin-bottom: 15px;
+    }
+
+    .call__inner>input::placeholder{
+        font-size: 16px;
+    }
+
+    .sogl{
+        gap: 21px;
+        margin-bottom: 15px;
+    }
+
+    .sogl>input{
+        width: 20px;
+        height: 20px;
+    }
+
+    .sogl__text{
+        font-size: 15px;
+    }
+
+    .call-btn{
+        height: 43px;
+        font-size: 20px;
+    }
+
+    /* .call-btn:hover{
+        background: linear-gradient(180deg, #329FD9, #4EC9FE);
+    } */
+
+    /* end-call */
+}

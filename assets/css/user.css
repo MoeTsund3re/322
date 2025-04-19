@@ -1,0 +1,121 @@
+.content2{
+    max-width: 900px;
+}
+
+.form-user{
+    margin-bottom: 40px;
+}
+
+.user-tabs{
+    height: 300px;
+}
+
+.user-name{
+    font-size: 32px;
+    font-weight: 500;
+    color: black;
+    margin-bottom: 20px;
+}
+
+.user-email{
+    font-size: 24px;
+    color: black;
+}
+
+.form-user__text{
+    font-size: 22px;
+    color: #909090;
+    margin-bottom: 5px;
+}
+
+.form-user__input{
+    width: 400px;
+    height: 70px;
+    border-radius: 10px;
+    margin-bottom: 60px;
+    outline: none;
+}
+
+.form-user__input::placeholder{
+    font-size: 20px;
+    padding: 20px;
+    color: black;
+}
+
+.form-user__sec{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.user-save__btn{
+    height: 70px;
+    margin-top: 20px;
+}
+
+.user-price{
+    margin-top: 42px;
+    color: #E30000;
+    font-size: 33px;
+    font-weight: 500;
+}
+
+.user-basket__content{
+    margin-left: 50px;
+}
+
+@media screen and (max-width:800px) {
+
+    .content2{
+        max-width: 500px;
+    }
+    
+    .form-user{
+        margin-bottom: 80px;
+    }
+    
+    .user-tabs{
+        height: 200px;
+    }
+    
+    .user-name{
+        font-size: 22px;
+        margin-bottom: 15px;
+    }
+    
+    .user-email{
+        font-size: 14px;
+    }
+    
+    .form-user__text{
+        font-size: 16px;
+        margin-bottom: 3px;
+    }
+    
+    .form-user__input{
+        width: 215px;
+        height: 50px;
+        border-radius: 5px;
+        margin-bottom: 20px;
+    }
+    
+    .form-user__input::placeholder{
+        font-size: 14px;
+        padding: 14px;
+    }
+     
+    .user-save__btn{
+        height: 50px;
+        margin-top: 20px;
+    }
+}
+
+@media screen and (max-width:320px) {
+    .user-basket__content{
+        margin-left: 0px;
+    }
+}
+
+
+
